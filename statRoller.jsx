@@ -43,12 +43,10 @@ const rollOne = `Number set: ` + setOne + `.    Total: ` + sumOne;
 const rollTwo = `Number set: ` + setTwo + `.    Total: ` + sumTwo;
 const rollThree = `Number set: ` + setThree + `.    Total: ` + sumThree;
 
-if(sumOne >= sumTwo) {
-    if(sumOne >= sumThree) {
-        console.log(rollOne)
-    }console.log(rollThree)
-} else if(sumTwo >= sumThree) {
-    console.log(rollTwo)} else {
-        console.log(rollThree)
-    }
-
+if(sumOne >= sumTwo && sumOne >= sumThree) {
+    console.log(rollOne)
+} else if(sumTwo >= sumOne && sumTwo >= sumThree) {
+    console.log(rollTwo)
+} else {
+    console.log(rollThree)
+};
