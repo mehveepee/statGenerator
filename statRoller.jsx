@@ -2,41 +2,53 @@ function roller(max) {
     return Math.floor(Math.random()*max + 1);
 }
 let dOne = roller(20);
-        console.log(dOne);
     let dTwo = roller(20);
-        console.log(dTwo);
     let dThree = roller(20);
-        console.log(dThree);
     let dFour = roller(20);
-        console.log(dFour);
     let dFive = roller(20);
-        console.log(dFive);
     let dSix = roller(20);
-        console.log(dSix);
     let dSeven = roller(20);
-        console.log(dSeven);
     let dEight = roller(20);
-        console.log(dEight);
     let dNine = roller(20);
-        console.log(dNine);
     let dTen = roller(20);
-        console.log(dTen);
     let dEleven = roller(20);
-        console.log(dEleven);
     let dTwelve = roller(20);
-        console.log(dTwelve);
+    let dThirteen = roller(20);
+    let dFourteen = roller(20);
+    let dFifteen = roller(20);
+    let dSixteen = roller(20);
+    let dSeventeen = roller(20);
+    let dEighteen = roller(20);
 
-const rollOne = [dOne,dTwo,dThree,dFour,dFive,dSix];
-const rollTwo = [dSeven,dEight,dNine,dTen,dEleven,dTwelve];
+const setOne = [dOne,dTwo,dThree,dFour,dFive,dSix];
+const setTwo = [dSeven,dEight,dNine,dTen,dEleven,dTwelve];
+const setThree = [dThirteen, dFourteen, dFifteen, dSixteen, dSeventeen,dEighteen];
 
-var sumOne = rollOne.reduce(function(a, b){
+var sumOne = setOne.reduce(function(a, b){
         return a + b;
     }, 0);
-var sumTwo = rollTwo.reduce(function(a, b){
+var sumTwo = setTwo.reduce(function(a, b){
         return a+b;
 }, 0);
-console.log(rollOne);
+var sumThree = setThree.reduce(function(a, b){
+        return a+b;
+}, 0);
+console.log(setOne);
 console.log(sumOne);       
-console.log(rollTwo);
+console.log(setTwo);
 console.log(sumTwo); 
+console.log(setThree);
+console.log(sumThree);
+const rollOne = `Number set: ` + setOne + `.    Total: ` + sumOne;
+const rollTwo = `Number set: ` + setTwo + `.    Total: ` + sumTwo;
+const rollThree = `Number set: ` + setThree + `.    Total: ` + sumThree;
+
+if(sumOne >= sumTwo) {
+    if(sumOne >= sumThree) {
+        console.log(rollOne)
+    }console.log(rollThree)
+} else if(sumTwo >= sumThree) {
+    console.log(rollTwo)} else {
+        console.log(rollThree)
+    }
 
